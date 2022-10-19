@@ -16,8 +16,9 @@ output:
 
 ```{r setup, include=FALSE}
 library(tidyverse)
-interviews <- readr::read_csv("data/SAFI_clean.csv")
-interviews_plotting <- readr::read_csv("data/interviews_plotting.csv")
+library(here)
+interviews <- readr::read_csv(here("data", "SAFI_clean.csv"))
+interviews_plotting <- readr::read_csv(here("data","interviews_plotting.csv"))
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
   fig.width=9, fig.height=5, fig.retina=3,
@@ -87,12 +88,12 @@ R is integrated into RStudio, so you never actually have to open R ....
 ---
 ## Organising working directory
 
-![](assets/img/rstudio_project_files.jpeg)
+![](/assets/img/rstudio_project_files.jpeg)
 ---
 
 ## Downloading data
 
-```{r}
+```{r eval = F}
 download.file("https://ndownloader.figshare.com/files/11492171",
               "data/SAFI_clean.csv", mode = "wb")
 ```
@@ -179,7 +180,7 @@ percent_wall_type %>%
 
 Things to look forward to:
 
-![](assets/img/rmarkdown_wizards.png)
+![](/assets/img/rmarkdown_wizards.png)
 
 ---
 class: inverse
