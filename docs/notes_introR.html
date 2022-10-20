@@ -11,7 +11,7 @@
 
 <meta name="author" content="Aleksandra Wilczynska" />
 
-<meta name="date" content="2022-10-19" />
+<meta name="date" content="2022-10-20" />
 
 <title>Notes for Intro To R Carpentry</title>
 
@@ -365,7 +365,7 @@ pre code {
 
 <h1 class="title toc-ignore">Notes for Intro To R Carpentry</h1>
 <h4 class="author">Aleksandra Wilczynska</h4>
-<h4 class="date">2022-10-19</h4>
+<h4 class="date">2022-10-20</h4>
 
 </div>
 
@@ -449,7 +449,7 @@ area_hectares # call</code></pre>
 <li>Discuss the naming rules and conventions
 <ul>
 <li>Characters, numbers, <code>_</code>, <code>.</code> allowed</li>
-<li>But names cannot <strong>start</strong> with a number</li>
+<li>Names cannot <strong>start</strong> with a number</li>
 <li>Use of dots <code>.</code> not recommended</li>
 <li>Some names not allowed (e.g. <code>if</code>,
 <code>else</code>)</li>
@@ -470,13 +470,16 @@ area_hectares * 2.47  </code></pre>
 <pre class="r"><code>area_acres &lt;- area_hectares * 2.47 
 
 area_hectares &lt;- 50 
-area_acres </code></pre>
+area_acres  </code></pre>
 <pre><code>## [1] 6.175</code></pre>
-<pre class="r"><code>area_hectares * 2.47</code></pre>
+<pre class="r"><code>area_hectares * 2.47 </code></pre>
 <pre><code>## [1] 123.5</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Exercise 1 - go to slides</strong></li>
+<li><strong>Exercise 1 </strong></li>
 </ol>
+<div class="alert alert-info">
+<p><strong>Go to slides</strong></p>
+</div>
 </div>
 <div id="functions" class="section level2">
 <h2>Functions</h2>
@@ -503,13 +506,16 @@ round(3.1415)</code></pre>
 <pre><code>## [1] 3.14</code></pre>
 <pre class="r"><code># ?round</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li><strong>Exercise 2 - go to slides</strong></li>
+<li><strong>Exercise 2</strong></li>
 </ol>
+<div class="alert alert-info">
+<p><strong>Go to slides</strong></p>
+</div>
 </div>
 <div id="vectors-and-data-types" class="section level2">
 <h2>Vectors and data types</h2>
 <ol style="list-style-type: decimal">
-<li>Create vectors with (combine) <code>c()</code> function</li>
+<li>Create vectors with <code>c()</code> (combine) function</li>
 </ol>
 <pre class="r"><code>#Vectors 
 hh_members &lt;- c( 3, 7, 10, 6)
@@ -521,16 +527,21 @@ respondent_wall_type</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Inspect content of the vector</li>
 </ol>
-<pre class="r"><code>length(hh_members)</code></pre>
+<pre class="r"><code>#Length of vector
+length(hh_members)</code></pre>
 <pre><code>## [1] 4</code></pre>
 <pre class="r"><code>length(respondent_wall_type)</code></pre>
 <pre><code>## [1] 3</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Add elements to a vector with <code>c()</code></li>
 </ol>
-<pre class="r"><code>possessions &lt;- c(&#39;bicycle&#39;, &#39;radio&#39;, &#39;television&#39;)
-possessions &lt;- c(possessions, &#39;mobile_phone&#39;)
-possessions &lt;- c(&#39;car&#39;, possessions)</code></pre>
+<pre class="r"><code># Adding elements to a vector
+possessions &lt;- c(&#39;bicycle&#39;, &#39;radio&#39;, &#39;television&#39;)
+possessions &lt;- c(possessions, &#39;mobile_phone&#39;) # add to the end of the vector
+possessions &lt;- c(&#39;car&#39;, possessions) # add to the beginning of the vector
+
+possessions</code></pre>
+<pre><code>## [1] &quot;car&quot;          &quot;bicycle&quot;      &quot;radio&quot;        &quot;television&quot;   &quot;mobile_phone&quot;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Data types</li>
 </ol>
@@ -543,21 +554,35 @@ possessions &lt;- c(&#39;car&#39;, possessions)</code></pre>
 <li><code>raw</code></li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
-<li><p><strong>Exercise 3 - go to slides</strong></p></li>
-<li><p>OPTIONAL <strong>Exercise 4 - go to slides</strong></p></li>
-<li><p>Subsetting vectors</p></li>
+<li><strong>Exercise 3</strong></li>
+</ol>
+<div class="alert alert-info">
+<p><strong>Go to slides</strong></p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>OPTIONAL <strong>Exercise 4</strong></li>
+</ol>
+<div class="alert alert-info">
+<p><strong>Go to slides</strong></p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Subsetting vectors</li>
 </ol>
 <pre class="r"><code># Subsetting vectors
 respondent_wall_type &lt;- c(&#39;muddaub&#39;, &#39;burntbricks&#39;, &#39;sunbricks&#39;)
 
-respondent_wall_type[2]</code></pre>
+# Subsetting by index
+respondent_wall_type[2] # 2 element of the vector</code></pre>
 <pre><code>## [1] &quot;burntbricks&quot;</code></pre>
-<pre class="r"><code>respondent_wall_type[c(3,2)]</code></pre>
+<pre class="r"><code>respondent_wall_type[c(3,2)] # 3 and 2 element of the vector</code></pre>
 <pre><code>## [1] &quot;sunbricks&quot;   &quot;burntbricks&quot;</code></pre>
-<pre class="r"><code>hh_members &lt;- c(3, 7, 10, 6)
-hh_members[c(TRUE, FALSE, TRUE, TRUE)]</code></pre>
+<pre class="r"><code># Subsetting by logical vector
+hh_members &lt;- c(3, 7, 10, 6)
+hh_members[c(TRUE, FALSE, TRUE, TRUE)] # 1,3 and 4 element of the vector </code></pre>
 <pre><code>## [1]  3 10  6</code></pre>
-<pre class="r"><code>hh_members &gt; 5</code></pre>
+<pre class="r"><code># Subsetting by condition
+
+hh_members &gt; 5   # condition creates a vector of logical values</code></pre>
 <pre><code>## [1] FALSE  TRUE  TRUE  TRUE</code></pre>
 <pre class="r"><code>hh_members[hh_members &gt; 5]</code></pre>
 <pre><code>## [1]  7 10  6</code></pre>
@@ -594,6 +619,8 @@ mean(rooms)</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Useful functions: <code>is.na()</code>, <code>na.omit()</code></li>
 </ol>
+<pre class="r"><code>rooms</code></pre>
+<pre><code>## [1]  2  1  1 NA  7</code></pre>
 <pre class="r"><code>is.na(rooms)</code></pre>
 <pre><code>## [1] FALSE FALSE FALSE  TRUE FALSE</code></pre>
 <pre class="r"><code>!is.na(rooms)</code></pre>
@@ -601,8 +628,11 @@ mean(rooms)</code></pre>
 <pre class="r"><code>rooms[!is.na(rooms)]</code></pre>
 <pre><code>## [1] 2 1 1 7</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li><strong>Exercise 5 - go to the slides</strong></li>
+<li><strong>Exercise 5</strong></li>
 </ol>
+<div class="alert alert-info">
+<p><strong>Go to slides</strong></p>
+</div>
 </div>
 </div>
 

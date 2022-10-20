@@ -109,8 +109,12 @@ area_hectares * 2.47
 
 ```
 
-5. **Exercise 1 - go to slides** 
+5. **Exercise 1 ** 
  
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
 ## Functions 
 
 1. What is a function and the arguments
@@ -135,11 +139,16 @@ round(3.1415, digits = 2)
 # ?round
 ```
 
-4. **Exercise 2 - go to slides**
+4. **Exercise 2**
+
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
 
 ## Vectors and data types
 
-1. Create vectors with (combine) `c()` function
+1. Create vectors with `c()` (combine) function
 ```{r}
 #Vectors 
 hh_members <- c( 3, 7, 10, 6)
@@ -151,6 +160,7 @@ respondent_wall_type
 
 2. Inspect content of the vector
 ```{r}
+#Length of vector
 length(hh_members)
 length(respondent_wall_type)
 
@@ -158,9 +168,12 @@ length(respondent_wall_type)
 
 3. Add elements to a vector with `c()`
 ```{r}
+# Adding elements to a vector
 possessions <- c('bicycle', 'radio', 'television')
-possessions <- c(possessions, 'mobile_phone')
-possessions <- c('car', possessions)
+possessions <- c(possessions, 'mobile_phone') # add to the end of the vector
+possessions <- c('car', possessions) # add to the beginning of the vector
+
+possessions
 
 ```
 
@@ -172,9 +185,19 @@ possessions <- c('car', possessions)
   - `complex`
   - `raw`
   
-5. **Exercise 3 - go to slides**
+5. **Exercise 3**
 
-6. OPTIONAL **Exercise 4 - go to slides**
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
+
+6. OPTIONAL **Exercise 4**
+
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
 
 7. Subsetting vectors 
 
@@ -182,14 +205,17 @@ possessions <- c('car', possessions)
 # Subsetting vectors
 respondent_wall_type <- c('muddaub', 'burntbricks', 'sunbricks')
 
-respondent_wall_type[2]
-respondent_wall_type[c(3,2)]
+# Subsetting by index
+respondent_wall_type[2] # 2 element of the vector
+respondent_wall_type[c(3,2)] # 3 and 2 element of the vector
 
+# Subsetting by logical vector
 hh_members <- c(3, 7, 10, 6)
-hh_members[c(TRUE, FALSE, TRUE, TRUE)]
+hh_members[c(TRUE, FALSE, TRUE, TRUE)] # 1,3 and 4 element of the vector 
 
+# Subsetting by condition
 
-hh_members > 5
+hh_members > 5   # condition creates a vector of logical values
 hh_members[hh_members > 5]
 hh_members[hh_members < 4 | hh_members > 7]
 hh_members[hh_members >= 4 & hh_members <= 7]
@@ -220,12 +246,15 @@ max(rooms, na.rm = TRUE)
 
 3. Useful functions: `is.na()`, `na.omit()`
 ```{r}
+rooms
 is.na(rooms)
 !is.na(rooms)
 rooms[!is.na(rooms)]
 
 ```
 
-4. **Exercise 5 - go to the slides**
+4. **Exercise 5**
 
-
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
