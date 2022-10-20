@@ -1,0 +1,231 @@
+---
+title: "Notes for Intro To R Carpentry"
+author: "Aleksandra Wilczynska"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      warning = FALSE , 
+                      message = FALSE
+                      )
+```
+
+# Before we Start
+## Why R?
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
+## Why Rstudio
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
+### Tour around R Studio
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
+**Show:**
+1. Panes 
+
+2. Working directory and project **create a project**
+
+3. Create directories 
+
+4. Create a script: script.R (save in the folder structure)
+
+5. Explain difference between the console and the script (chat vs email)
+6. Explain shortcuts: 
+    - `CTRL + ENTER` or `Cmd + Return` 
+    
+
+7. Installing packages 
+    - Check if packages are installed ( interface )
+    - Install packages (interface + console)
+
+```{r eval = F}
+install.packages('tidyverse')
+```
+
+8. Downloading files
+```{r eval = F}
+download.file("https://ndownloader.figshare.com/files/11492171",
+              "data/SAFI_clean.csv", mode = "wb")
+```
+
+# Intro to R
+
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
+## Create objects in R
+
+1. R As Calculator
+```{r}
+3+5  
+12/7  
+12*7
+3^2 # 3 to the power of 2
+
+```
+
+2. Assigning value to an object 
+  - Word *object* and *variable* can differ in meaning, but here used synonymously. 
+```{r}
+# Creating objects
+area_hectares <- 1.0 # asign
+
+area_hectares # call
+```
+
+3. Discuss the naming rules and conventions
+    - Characters, numbers, `_`, `.` allowed
+    - Names cannot **start** with a number
+    - Use of dots `.` not recommended
+    - Some names not allowed (e.g. `if`, `else`)
+    - Other allowed, but not recommended (e.g. `weights`, `df`, `mean`)
+    - Case sensitive 
+    - Stick to the same convention
+    
+4. Arithmetic with created objects
+```{r}
+# Arithmetic with objects
+
+area_hectares * 2.47 
+
+area_hectares <- 2.5  
+area_hectares * 2.47  
+
+area_acres <- area_hectares * 2.47 
+
+area_hectares <- 50 
+area_acres  
+
+area_hectares * 2.47 
+
+```
+
+5. **Exercise 1 - go to slides** 
+ 
+## Functions 
+
+1. What is a function and the arguments
+2. Function returns a value
+```{r}
+# Functions 
+
+sqrt(9)
+
+```
+
+3. Arguments of the functions 
+```{r}
+# Function with multiple arguments
+
+
+round(3.1415)
+args(round)
+
+round(3.1415, digits = 2)
+
+# ?round
+```
+
+4. **Exercise 2 - go to slides**
+
+## Vectors and data types
+
+1. Create vectors with (combine) `c()` function
+```{r}
+#Vectors 
+hh_members <- c( 3, 7, 10, 6)
+hh_members
+
+respondent_wall_type <- c('muddaub', 'burntbricks', 'sunbricks')
+respondent_wall_type
+```
+
+2. Inspect content of the vector
+```{r}
+length(hh_members)
+length(respondent_wall_type)
+
+```
+
+3. Add elements to a vector with `c()`
+```{r}
+possessions <- c('bicycle', 'radio', 'television')
+possessions <- c(possessions, 'mobile_phone')
+possessions <- c('car', possessions)
+
+```
+
+4. Data types 
+  - `numeric` (`double`)
+  - `character`
+  - `logical`
+  - `integer`
+  - `complex`
+  - `raw`
+  
+5. **Exercise 3 - go to slides**
+
+6. OPTIONAL **Exercise 4 - go to slides**
+
+7. Subsetting vectors 
+
+```{r}
+# Subsetting vectors
+respondent_wall_type <- c('muddaub', 'burntbricks', 'sunbricks')
+
+respondent_wall_type[2]
+respondent_wall_type[c(3,2)]
+
+hh_members <- c(3, 7, 10, 6)
+hh_members[c(TRUE, FALSE, TRUE, TRUE)]
+
+
+hh_members > 5
+hh_members[hh_members > 5]
+hh_members[hh_members < 4 | hh_members > 7]
+hh_members[hh_members >= 4 & hh_members <= 7]
+
+possessions <- c("car", "bicycle", "radio", "television", "mobile_phone")
+
+possessions[possessions == "car" | possessions == "bicycle"] 
+
+possessions %in% c("car", "bicycle")
+possessions[possessions %in% c("car", "bicycle")]
+
+
+```
+
+## Missing Data 
+1. Missing data notation in R - NA
+2. Use of `na.rm = TRUE` argument
+```{r}
+#Missing values
+
+rooms <- c(2, 1, 1, NA, 7)
+mean(rooms)
+max(rooms)
+
+mean(rooms, na.rm = TRUE)
+max(rooms, na.rm = TRUE)
+```
+
+3. Useful functions: `is.na()`, `na.omit()`
+```{r}
+is.na(rooms)
+!is.na(rooms)
+rooms[!is.na(rooms)]
+
+```
+
+4. **Exercise 5 - go to the slides**
+
+

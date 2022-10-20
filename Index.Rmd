@@ -186,14 +186,14 @@ Things to look forward to:
 class: inverse
 ## Exercise 1
 
-`r emo::ji("clock")` **3 mins**
+`r emo::ji("clock")` **2 mins**
 
 Create two variables `r_length` and `r_width` and assign them values.
 
 Create a third variable `r_area` and give it a value by multiplying `r_length`
 and `r_width`.
 
-`r countdown::countdown(minutes = 3, color_running_background  = "#6CC24A", color_running_text = "black", color_finished_background = "#E03C31", color_finished_text =  "grey30")`
+`r countdown::countdown(minutes = 2, color_running_background  = "#6CC24A", color_running_text = "black", color_finished_background = "#E03C31", color_finished_text =  "grey30")`
 
 --
 
@@ -210,13 +210,13 @@ class: inverse
 
 ## Exercise 2
 
-`r emo::ji("clock")` **3 mins**
+`r emo::ji("clock")` **2 mins**
 
 Type `?round` into the **console** to open the help page for the `round()` function.
 
 Find the appropriate function to round `1.624` down to the nearest integer.
 
-`r countdown::countdown(minutes = 3, color_running_background  = "#6CC24A", color_running_text = "black", color_finished_background = "#E03C31", color_finished_text =  "grey30")`
+`r countdown::countdown(minutes = 2, color_running_background  = "#6CC24A", color_running_text = "black", color_finished_background = "#E03C31", color_finished_text =  "grey30")`
 
 --
 
