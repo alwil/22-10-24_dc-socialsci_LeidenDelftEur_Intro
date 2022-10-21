@@ -31,18 +31,18 @@ knitr::opts_chunk$set(echo = TRUE,
 **Show:**
 1. Panes 
 
-2. Working directory and project **create a project**
+1. Working directory and project **create a project**: `data-carpentry`
 
-3. Create directories 
+1. Create directories 
 
-4. Create a script: script.R (save in the folder structure)
+1. Explain difference between the console and the script (chat vs email)
 
-5. Explain difference between the console and the script (chat vs email)
-6. Explain shortcuts: 
+1. Create a script: `script.R`  - save in the `scripts` folder 
+
+1. Explain shortcuts: 
     - `CTRL + ENTER` or `Cmd + Return` 
     
-
-7. Installing packages 
+1. Installing packages 
     - Check if packages are installed ( interface )
     - Install packages (interface + console)
 
@@ -50,7 +50,7 @@ knitr::opts_chunk$set(echo = TRUE,
 install.packages('tidyverse')
 ```
 
-8. Downloading files
+1. Downloading files
 ```{r eval = F}
 download.file("https://ndownloader.figshare.com/files/11492171",
               "data/SAFI_clean.csv", mode = "wb")
@@ -73,7 +73,7 @@ download.file("https://ndownloader.figshare.com/files/11492171",
 
 ```
 
-2. Assigning value to an object 
+1. Assigning value to an object 
   - Word *object* and *variable* can differ in meaning, but here used synonymously. 
 ```{r}
 # Creating objects
@@ -82,14 +82,12 @@ area_hectares <- 1.0 # asign
 area_hectares # call
 ```
 
-3. Discuss the naming rules and conventions
-    - Characters, numbers, `_`, `.` allowed
-    - Names cannot **start** with a number
-    - Use of dots `.` not recommended
-    - Some names not allowed (e.g. `if`, `else`)
-    - Other allowed, but not recommended (e.g. `weights`, `df`, `mean`)
-    - Case sensitive 
-    - Stick to the same convention
+1. Discuss the naming rules and conventions
+
+<div class="alert alert-info">
+<strong>Go to slides</strong> 
+</div>
+
     
 4. Arithmetic with created objects
 ```{r}

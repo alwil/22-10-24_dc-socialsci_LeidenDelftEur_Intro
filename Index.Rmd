@@ -181,6 +181,24 @@ percent_wall_type %>%
 Things to look forward to:
 
 ![](assets/img/rmarkdown_wizards.png)
+---
+
+### Naming conventions
+
+Characters, numbers, `_` and `.` allowed
+
+Names cannot start with a number
+
+Use of  `.` not recommended
+
+Some names not allowed (e.g. `if`, `else`)
+
+Others allowed, but not recommended (e.g. `weights`, `df`, `mean`)
+
+Case sensitive: `Age` is different from `age`
+
+Stick to the same convention
+    
 
 ---
 class: inverse

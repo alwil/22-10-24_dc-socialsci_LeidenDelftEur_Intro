@@ -11,7 +11,7 @@
 
 <meta name="author" content="Aleksandra Wilczynska" />
 
-<meta name="date" content="2022-10-20" />
+<meta name="date" content="2022-10-21" />
 
 <title>Notes for Intro To R Carpentry</title>
 
@@ -365,7 +365,7 @@ pre code {
 
 <h1 class="title toc-ignore">Notes for Intro To R Carpentry</h1>
 <h4 class="author">Aleksandra Wilczynska</h4>
-<h4 class="date">2022-10-20</h4>
+<h4 class="date">2022-10-21</h4>
 
 </div>
 
@@ -389,13 +389,14 @@ pre code {
 <p><strong>Go to slides</strong></p>
 </div>
 <p><strong>Show:</strong> 1. Panes</p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Working directory and project <strong>create a
-project</strong></p></li>
+<ol style="list-style-type: decimal">
+<li><p>Working directory and project <strong>create a project</strong>:
+<code>data-carpentry</code></p></li>
 <li><p>Create directories</p></li>
-<li><p>Create a script: script.R (save in the folder structure)</p></li>
 <li><p>Explain difference between the console and the script (chat vs
 email)</p></li>
+<li><p>Create a script: <code>script.R</code> - save in the
+<code>scripts</code> folder</p></li>
 <li><p>Explain shortcuts:</p>
 <ul>
 <li><code>CTRL + ENTER</code> or <code>Cmd + Return</code></li>
@@ -407,7 +408,7 @@ email)</p></li>
 </ul></li>
 </ol>
 <pre class="r"><code>install.packages(&#39;tidyverse&#39;)</code></pre>
-<ol start="8" style="list-style-type: decimal">
+<ol style="list-style-type: decimal">
 <li>Downloading files</li>
 </ol>
 <pre class="r"><code>download.file(&quot;https://ndownloader.figshare.com/files/11492171&quot;,
@@ -433,7 +434,7 @@ email)</p></li>
 <pre><code>## [1] 84</code></pre>
 <pre class="r"><code>3^2 # 3 to the power of 2</code></pre>
 <pre><code>## [1] 9</code></pre>
-<ol start="2" style="list-style-type: decimal">
+<ol style="list-style-type: decimal">
 <li>Assigning value to an object</li>
 </ol>
 <ul>
@@ -445,19 +446,13 @@ area_hectares &lt;- 1.0 # asign
 
 area_hectares # call</code></pre>
 <pre><code>## [1] 1</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Discuss the naming rules and conventions
-<ul>
-<li>Characters, numbers, <code>_</code>, <code>.</code> allowed</li>
-<li>Names cannot <strong>start</strong> with a number</li>
-<li>Use of dots <code>.</code> not recommended</li>
-<li>Some names not allowed (e.g. <code>if</code>,
-<code>else</code>)</li>
-<li>Other allowed, but not recommended (e.g. <code>weights</code>,
-<code>df</code>, <code>mean</code>)</li>
-<li>Case sensitive</li>
-<li>Stick to the same convention</li>
-</ul></li>
+<ol style="list-style-type: decimal">
+<li>Discuss the naming rules and conventions</li>
+</ol>
+<div class="alert alert-info">
+<p><strong>Go to slides</strong></p>
+</div>
+<ol start="4" style="list-style-type: decimal">
 <li>Arithmetic with created objects</li>
 </ol>
 <pre class="r"><code># Arithmetic with objects
