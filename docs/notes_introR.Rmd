@@ -29,20 +29,26 @@ knitr::opts_chunk$set(echo = TRUE,
 </div>
 
 **Show:**
+
 1. Panes 
 
-1. Working directory and project **create a project**: `data-carpentry`
+2. Working directory and project **create a project**: `data-carpentry`
 
-1. Create directories 
+3. Create directories 
+  - `data`
+  - `data_output`
+  - `documents`
+  - `fig_output`
+  - `scripts`
 
-1. Explain difference between the console and the script (chat vs email)
+4. Explain difference between the console and the script (chat vs email)
 
-1. Create a script: `script.R`  - save in the `scripts` folder 
+5. Create a script: `script.R`  - save in the `scripts` folder 
 
-1. Explain shortcuts: 
+6. Explain shortcuts: 
     - `CTRL + ENTER` or `Cmd + Return` 
     
-1. Installing packages 
+7. Installing packages 
     - Check if packages are installed ( interface )
     - Install packages (interface + console)
 
@@ -50,7 +56,7 @@ knitr::opts_chunk$set(echo = TRUE,
 install.packages('tidyverse')
 ```
 
-1. Downloading files
+8. Downloading files
 ```{r eval = F}
 download.file("https://ndownloader.figshare.com/files/11492171",
               "data/SAFI_clean.csv", mode = "wb")
@@ -73,7 +79,7 @@ download.file("https://ndownloader.figshare.com/files/11492171",
 
 ```
 
-1. Assigning value to an object 
+2. Assigning value to an object 
   - Word *object* and *variable* can differ in meaning, but here used synonymously. 
 ```{r}
 # Creating objects
@@ -82,7 +88,7 @@ area_hectares <- 1.0 # asign
 area_hectares # call
 ```
 
-1. Discuss the naming rules and conventions
+3. Discuss the naming rules and conventions
 
 <div class="alert alert-info">
 <strong>Go to slides</strong> 
@@ -146,7 +152,15 @@ round(3.1415, digits = 2)
 
 ## Vectors and data types
 
-1. Create vectors with `c()` (combine) function
+1. Data types 
+  - `numeric` (`double`)
+  - `character`
+  - `logical`
+  - `integer`
+  - `complex`
+  - `raw`
+
+2. Create vectors with `c()` (combine) function
 ```{r}
 #Vectors 
 hh_members <- c( 3, 7, 10, 6)
@@ -156,7 +170,7 @@ respondent_wall_type <- c('muddaub', 'burntbricks', 'sunbricks')
 respondent_wall_type
 ```
 
-2. Inspect content of the vector
+3. Inspect content of the vector
 ```{r}
 #Length of vector
 length(hh_members)
@@ -164,7 +178,7 @@ length(respondent_wall_type)
 
 ```
 
-3. Add elements to a vector with `c()`
+4. Add elements to a vector with `c()`
 ```{r}
 # Adding elements to a vector
 possessions <- c('bicycle', 'radio', 'television')
@@ -175,14 +189,7 @@ possessions
 
 ```
 
-4. Data types 
-  - `numeric` (`double`)
-  - `character`
-  - `logical`
-  - `integer`
-  - `complex`
-  - `raw`
-  
+
 5. **Exercise 3**
 
 <div class="alert alert-info">

@@ -11,7 +11,7 @@
 
 <meta name="author" content="Aleksandra Wilczynska" />
 
-<meta name="date" content="2022-10-21" />
+<meta name="date" content="2022-10-24" />
 
 <title>Notes for Intro To R Carpentry</title>
 
@@ -365,7 +365,7 @@ pre code {
 
 <h1 class="title toc-ignore">Notes for Intro To R Carpentry</h1>
 <h4 class="author">Aleksandra Wilczynska</h4>
-<h4 class="date">2022-10-21</h4>
+<h4 class="date">2022-10-24</h4>
 
 </div>
 
@@ -388,11 +388,21 @@ pre code {
 <div class="alert alert-info">
 <p><strong>Go to slides</strong></p>
 </div>
-<p><strong>Show:</strong> 1. Panes</p>
+<p><strong>Show:</strong></p>
 <ol style="list-style-type: decimal">
+<li><p>Panes</p></li>
 <li><p>Working directory and project <strong>create a project</strong>:
 <code>data-carpentry</code></p></li>
 <li><p>Create directories</p></li>
+</ol>
+<ul>
+<li><code>data</code></li>
+<li><code>data_output</code></li>
+<li><code>documents</code></li>
+<li><code>fig_output</code></li>
+<li><code>scripts</code></li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
 <li><p>Explain difference between the console and the script (chat vs
 email)</p></li>
 <li><p>Create a script: <code>script.R</code> - save in the
@@ -408,7 +418,7 @@ email)</p></li>
 </ul></li>
 </ol>
 <pre class="r"><code>install.packages(&#39;tidyverse&#39;)</code></pre>
-<ol style="list-style-type: decimal">
+<ol start="8" style="list-style-type: decimal">
 <li>Downloading files</li>
 </ol>
 <pre class="r"><code>download.file(&quot;https://ndownloader.figshare.com/files/11492171&quot;,
@@ -434,7 +444,7 @@ email)</p></li>
 <pre><code>## [1] 84</code></pre>
 <pre class="r"><code>3^2 # 3 to the power of 2</code></pre>
 <pre><code>## [1] 9</code></pre>
-<ol style="list-style-type: decimal">
+<ol start="2" style="list-style-type: decimal">
 <li>Assigning value to an object</li>
 </ol>
 <ul>
@@ -446,7 +456,7 @@ area_hectares &lt;- 1.0 # asign
 
 area_hectares # call</code></pre>
 <pre><code>## [1] 1</code></pre>
-<ol style="list-style-type: decimal">
+<ol start="3" style="list-style-type: decimal">
 <li>Discuss the naming rules and conventions</li>
 </ol>
 <div class="alert alert-info">
@@ -510,34 +520,6 @@ round(3.1415)</code></pre>
 <div id="vectors-and-data-types" class="section level2">
 <h2>Vectors and data types</h2>
 <ol style="list-style-type: decimal">
-<li>Create vectors with <code>c()</code> (combine) function</li>
-</ol>
-<pre class="r"><code>#Vectors 
-hh_members &lt;- c( 3, 7, 10, 6)
-hh_members</code></pre>
-<pre><code>## [1]  3  7 10  6</code></pre>
-<pre class="r"><code>respondent_wall_type &lt;- c(&#39;muddaub&#39;, &#39;burntbricks&#39;, &#39;sunbricks&#39;)
-respondent_wall_type</code></pre>
-<pre><code>## [1] &quot;muddaub&quot;     &quot;burntbricks&quot; &quot;sunbricks&quot;</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Inspect content of the vector</li>
-</ol>
-<pre class="r"><code>#Length of vector
-length(hh_members)</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>length(respondent_wall_type)</code></pre>
-<pre><code>## [1] 3</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Add elements to a vector with <code>c()</code></li>
-</ol>
-<pre class="r"><code># Adding elements to a vector
-possessions &lt;- c(&#39;bicycle&#39;, &#39;radio&#39;, &#39;television&#39;)
-possessions &lt;- c(possessions, &#39;mobile_phone&#39;) # add to the end of the vector
-possessions &lt;- c(&#39;car&#39;, possessions) # add to the beginning of the vector
-
-possessions</code></pre>
-<pre><code>## [1] &quot;car&quot;          &quot;bicycle&quot;      &quot;radio&quot;        &quot;television&quot;   &quot;mobile_phone&quot;</code></pre>
-<ol start="4" style="list-style-type: decimal">
 <li>Data types</li>
 </ol>
 <ul>
@@ -548,6 +530,34 @@ possessions</code></pre>
 <li><code>complex</code></li>
 <li><code>raw</code></li>
 </ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Create vectors with <code>c()</code> (combine) function</li>
+</ol>
+<pre class="r"><code>#Vectors 
+hh_members &lt;- c( 3, 7, 10, 6)
+hh_members</code></pre>
+<pre><code>## [1]  3  7 10  6</code></pre>
+<pre class="r"><code>respondent_wall_type &lt;- c(&#39;muddaub&#39;, &#39;burntbricks&#39;, &#39;sunbricks&#39;)
+respondent_wall_type</code></pre>
+<pre><code>## [1] &quot;muddaub&quot;     &quot;burntbricks&quot; &quot;sunbricks&quot;</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Inspect content of the vector</li>
+</ol>
+<pre class="r"><code>#Length of vector
+length(hh_members)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>length(respondent_wall_type)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Add elements to a vector with <code>c()</code></li>
+</ol>
+<pre class="r"><code># Adding elements to a vector
+possessions &lt;- c(&#39;bicycle&#39;, &#39;radio&#39;, &#39;television&#39;)
+possessions &lt;- c(possessions, &#39;mobile_phone&#39;) # add to the end of the vector
+possessions &lt;- c(&#39;car&#39;, possessions) # add to the beginning of the vector
+
+possessions</code></pre>
+<pre><code>## [1] &quot;car&quot;          &quot;bicycle&quot;      &quot;radio&quot;        &quot;television&quot;   &quot;mobile_phone&quot;</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li><strong>Exercise 3</strong></li>
 </ol>
